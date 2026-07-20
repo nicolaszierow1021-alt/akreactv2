@@ -13,6 +13,7 @@ import {
   Search,
   AppWindow,
   Home,
+  Rocket,
 } from "lucide-react";
 
 interface AppItem {
@@ -37,6 +38,8 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [deleteId, setDeleteId] = useState<string | null>(null);
+  const [deploying, setDeploying] = useState(false);
+  const [deploySuccess, setDeploySuccess] = useState<boolean | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem("admin_token");
@@ -102,6 +105,28 @@ export default function AdminPage() {
     } catch {
       console.error("Error deleting app");
     }
+  }
+
+  async function handleDeploy() {
+    setDeploying(true);
+    setDeploySuccess(null);
+    try {
+      const res = await fetch("/api/deploy", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (res.ok) {
+        setDeploySuccess(true);
+        setTimeout(() => setDeploySuccess(null), 3000);
+      } else {
+        setDeploySuccess(false);
+        setTimeout(() => setDeploySuccess(null), 3000);
+      }
+    } catch {
+      setDeploySuccess(false);
+      setTimeout(() => setDeploySuccess(null), 3000);
+    }
+    setDeploying(false);
   }
 
   const filtered = apps.filter(
@@ -204,6 +229,29 @@ export default function AdminPage() {
             >
               <Plus className="w-4 h-4 stroke-[3]" /> <span className="hidden sm:inline">Crear App</span>
             </Link>
+            <button
+              onClick={handleDeploy}
+              disabled={deploying}
+              className={`${
+                deploySuccess === true 
+                  ? "bg-green-600/20 border-green-500/30 text-green-500" 
+                  : deploySuccess === false 
+                    ? "bg-red-600/20 border-red-500/30 text-red-500" 
+                    : "bg-blue-600/20 border-blue-500/30 hover:bg-blue-500 hover:border-blue-400 text-blue-50 hover:text-white hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]"
+              } border px-4 py-2.5 rounded-xl text-[13px] font-bold transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(59,130,246,0.15)] uppercase tracking-wider disabled:opacity-50`}
+              title="Actualizar SEO en Google"
+            >
+              {deploying ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : deploySuccess === true ? (
+                <span className="text-green-500 text-base leading-none">✓</span>
+              ) : (
+                <Rocket className="w-4 h-4" />
+              )}
+              <span className="hidden sm:inline">
+                {deploySuccess === true ? "Listo" : deploySuccess === false ? "Error" : "Desplegar"}
+              </span>
+            </button>
             <button
               onClick={handleLogout}
               className="p-2.5 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-xl transition-all"
