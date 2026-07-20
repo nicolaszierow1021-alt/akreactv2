@@ -68,8 +68,27 @@ export default function Home() {
     return (
       <>
         <Header />
-        <main className="flex-1 pb-16 pt-12 flex justify-center items-center min-h-[60vh]">
-          <Loader2 className="w-10 h-10 animate-spin text-red-600" />
+        <main className="flex-1 pb-16 pt-8 max-w-7xl mx-auto w-full px-4 md:px-6">
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-slate-800/80 animate-pulse"></div>
+            <div className="h-6 w-32 bg-gray-200 dark:bg-slate-800/80 rounded-md animate-pulse"></div>
+          </div>
+          <div className="flex gap-4 overflow-hidden mb-12">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="w-[100%] sm:w-[85%] md:w-[45%] lg:w-[30%] h-[220px] bg-gray-200 dark:bg-slate-800/80 rounded-[26px] animate-pulse shrink-0 border border-gray-100 dark:border-white/5"></div>
+            ))}
+          </div>
+
+          <div className="h-12 w-full md:w-64 bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse mb-6"></div>
+          <div className="flex gap-4 overflow-hidden">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="w-[92%] sm:w-[50%] lg:w-[32%] flex flex-col gap-3 shrink-0">
+                <div className="h-[90px] bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse border border-gray-100 dark:border-white/5"></div>
+                <div className="h-[90px] bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse border border-gray-100 dark:border-white/5"></div>
+                <div className="h-[90px] bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse border border-gray-100 dark:border-white/5"></div>
+              </div>
+            ))}
+          </div>
         </main>
         <Footer />
       </>

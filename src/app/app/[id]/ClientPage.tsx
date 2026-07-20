@@ -78,9 +78,39 @@ export default function ClientAppDetail({ id }: { id: string }) {
     return (
       <>
         <Header />
-        <main className="flex-1 pb-16 pt-12 flex justify-center items-center min-h-[60vh]">
-          <Loader2 className="w-10 h-10 animate-spin text-red-600" />
-        </main>
+        <div className="min-h-screen bg-gray-50/50 dark:bg-[#0a0f1c]">
+          <main className="w-full max-w-7xl mx-auto min-h-screen bg-white dark:bg-transparent pb-10 md:pt-8 flex-1">
+            <div className="lg:flex lg:gap-10 lg:px-5">
+              <div className="lg:flex-1 lg:min-w-0">
+                <header className="px-5 lg:px-0 pt-6 md:pt-0 pb-4">
+                  <div className="h-4 w-48 bg-gray-200 dark:bg-slate-800/80 rounded animate-pulse mb-6"></div>
+                  <div className="flex gap-4 md:gap-6 items-center">
+                    <div className="w-[100px] h-[100px] md:w-[130px] md:h-[130px] bg-gray-200 dark:bg-slate-800/80 rounded-[22%] animate-pulse border border-gray-100 dark:border-white/5 shrink-0"></div>
+                    <div className="flex-1">
+                      <div className="h-8 md:h-10 w-3/4 bg-gray-200 dark:bg-slate-800/80 rounded-lg animate-pulse mb-3"></div>
+                      <div className="h-4 md:h-5 w-1/3 bg-gray-200 dark:bg-slate-800/80 rounded md:rounded-md animate-pulse mb-2"></div>
+                      <div className="h-4 w-2/3 bg-gray-200 dark:bg-slate-800/80 rounded md:rounded-md animate-pulse"></div>
+                    </div>
+                  </div>
+                  <div className="mt-5 md:mt-6 flex gap-3">
+                    <div className="h-9 md:h-10 w-28 md:w-32 bg-gray-200 dark:bg-slate-800/80 rounded-full animate-pulse border border-gray-100 dark:border-white/5"></div>
+                    <div className="h-9 md:h-10 w-28 md:w-32 bg-gray-200 dark:bg-slate-800/80 rounded-full animate-pulse border border-gray-100 dark:border-white/5"></div>
+                  </div>
+                </header>
+                <div className="mx-5 lg:mx-0 h-24 md:h-28 bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse mt-3 md:mt-4 border border-gray-100 dark:border-white/5"></div>
+                <div className="mx-5 lg:mx-0 h-40 md:h-48 bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse mt-6 md:mt-8 border border-gray-100 dark:border-white/5"></div>
+              </div>
+              <div className="hidden lg:block lg:w-[320px] xl:w-[350px] lg:shrink-0 mt-8 lg:mt-0">
+                 <div className="h-8 w-40 bg-gray-200 dark:bg-slate-800/80 rounded-lg animate-pulse mb-6"></div>
+                 <div className="space-y-4">
+                   {[1, 2, 3, 4].map(i => (
+                     <div key={i} className="flex gap-4 bg-gray-200 dark:bg-slate-800/80 p-4 rounded-2xl animate-pulse border border-gray-100 dark:border-white/5 h-[90px]"></div>
+                   ))}
+                 </div>
+              </div>
+            </div>
+          </main>
+        </div>
         <Footer />
       </>
     );
