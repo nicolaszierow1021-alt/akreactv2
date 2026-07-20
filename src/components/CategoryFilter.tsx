@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { Star } from "lucide-react";
+import { Pagination } from "@/components/Pagination";
 
 interface AppItem {
   id: string;
@@ -78,7 +79,8 @@ function normalizeSubcategory(str: string) {
 
 export function CategoryFilter({ apps, type, children }: CategoryFilterProps) {
   const [active, setActive] = useState("Todos");
-  const [visibleCount, setVisibleCount] = useState(20);
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 12;
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const allSubcategories = type === "juegos" ? GAME_SUBCATEGORIES : APP_SUBCATEGORIES;
@@ -89,7 +91,8 @@ export function CategoryFilter({ apps, type, children }: CategoryFilterProps) {
       ? apps
       : apps.filter((app) => normalizeSubcategory(app.subcategory) === normalizeSubcategory(active));
 
-  const visibleApps = filtered.slice(0, visibleCount);
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const visibleApps = filtered.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
   const pills = ["Todos", ...allSubcategories];
 
   return (
@@ -106,7 +109,7 @@ export function CategoryFilter({ apps, type, children }: CategoryFilterProps) {
                 key={pill}
                 onClick={() => {
                   setActive(pill);
-                  setVisibleCount(20);
+                  setCurrentPage(1);
                 }}
                 className={`shrink-0 px-6 py-2 rounded-full font-bold text-sm transition-all active:scale-95 cursor-pointer ${
                   active === pill
@@ -196,18 +199,15 @@ export function CategoryFilter({ apps, type, children }: CategoryFilterProps) {
                 </Link>
               ))}
             </div>
-            
-            {/* Load More Button */}
-            {visibleCount < filtered.length && (
-              <div className="flex justify-center mt-10">
-                <button
-                  onClick={() => setVisibleCount((prev) => prev + 20)}
-                  className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-red-500/30 transition-all active:scale-95 flex items-center gap-2"
-                >
-                  Cargar más
-                </button>
-              </div>
-            )}
+            {/* Pagination */}
+            <Pagination 
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={(page) => {
+                setCurrentPage(page);
+                window.scrollTo({ top: window.innerWidth < 768 ? 400 : 500, behavior: "smooth" });
+              }}
+            />
           </>
         ) : (
           <div className="text-center py-16 bg-slate-50 dark:bg-slate-800/20 border border-gray-100 dark:border-white/5 rounded-3xl">

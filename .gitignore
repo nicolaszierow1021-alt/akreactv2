@@ -42,3 +42,6 @@ next-env.d.ts
 
 # unused project
 pelishd/
+
+# cloudflare
+.wrangler/
