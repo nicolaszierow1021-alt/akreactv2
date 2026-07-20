@@ -9,6 +9,7 @@
 }
 
 :root {
+  color-scheme: light dark;
   --background: #f8fafc; /* gray-50 */
   --foreground: #0f172a; /* slate-900 */
 }
