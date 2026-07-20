@@ -1,4 +1,4 @@
-export const onRequest: PagesFunction = async (context: any) => {
+export const onRequest = async (context: any) => {
   const { request, next } = context;
   const url = new URL(request.url);
   const hostname = url.hostname;
