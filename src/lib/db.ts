@@ -120,6 +120,27 @@ export const getRecentApps = async (limit: number = 9): Promise<AppData[]> => {
   return data as AppData[];
 };
 
+export const getRecentAppsPaginated = async (
+  page: number = 1,
+  limit: number = 12
+): Promise<{ data: AppData[]; total: number }> => {
+  const from = (page - 1) * limit;
+  const to = from + limit - 1;
+
+  const { data, error, count } = await supabase
+    .from("apps")
+    .select(LIGHT_SELECT, { count: "exact" })
+    .order("updatedAt", { ascending: false })
+    .range(from, to);
+
+  if (error) {
+    console.error("Error fetching paginated recent apps:", error);
+    return { data: [], total: 0 };
+  }
+
+  return { data: data as AppData[], total: count || 0 };
+};
+
 export const searchApps = async (query: string, limit: number = 20): Promise<AppData[]> => {
   const { data, error } = await supabase
     .from("apps")

@@ -44,7 +44,7 @@ export default function Home() {
           appsData
         ] = await Promise.all([
           getFeaturedApps(6),
-          getRecentApps(9),
+          getRecentApps(12),
           getAppsByCategory("Juegos", 9),
           getAppsExcludingCategory("Juegos", 9)
         ]);
@@ -81,7 +81,7 @@ export default function Home() {
 
           <div className="h-12 w-full md:w-64 bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse mb-6"></div>
           <div className="flex gap-4 overflow-hidden">
-            {[1, 2, 3].map((i) => (
+            {[1, 2, 3, 4].map((i) => (
               <div key={i} className="w-[92%] sm:w-[50%] lg:w-[32%] flex flex-col gap-3 shrink-0">
                 <div className="h-[90px] bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse border border-gray-100 dark:border-white/5"></div>
                 <div className="h-[90px] bg-gray-200 dark:bg-slate-800/80 rounded-2xl animate-pulse border border-gray-100 dark:border-white/5"></div>
@@ -185,10 +185,13 @@ export default function Home() {
           <section className="mt-8 md:mt-12">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
               <div className="relative overflow-hidden flex items-center justify-between mb-6 bg-[#DC2626] dark:bg-slate-800/80 p-[0.6rem] rounded-[1.5rem] shadow-sm dark:shadow-none border border-transparent dark:border-white/5 transition-colors">
-                <h2 className="text-[18px] md:text-[20px] font-extrabold tracking-tight text-white dark:text-slate-100 flex items-center w-full justify-center md:justify-start md:gap-2.5 md:ml-2 relative">
+                <h2 className="text-[18px] md:text-[20px] font-extrabold tracking-tight text-white dark:text-slate-100 flex items-center justify-center md:justify-start md:gap-2.5 md:ml-2 relative">
                   <TrendingUp className="w-5 h-5 text-white dark:text-red-400 hidden md:block" />
                   <span>Actualizaciones</span>
                 </h2>
+                <Link href="/actualizaciones" className="text-[13px] md:text-[14px] font-bold text-white/90 hover:text-white dark:text-red-400 dark:hover:text-red-300 mr-2 md:mr-4 hover:underline shrink-0">
+                  Ver más
+                </Link>
               </div>
 
               <Carousel cellWidthClass="w-[92%] sm:w-[50%] lg:w-[32%]">
