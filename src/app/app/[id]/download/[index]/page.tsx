@@ -8,17 +8,28 @@ export const metadata = {
   }
 };
 
+import { supabase } from "@/lib/supabase";
+
 export async function generateStaticParams() {
-  const apps = await getRecentApps(100);
-  if (apps.length === 0) {
+  const { data: apps, error } = await supabase
+    .from("apps")
+    .select("id, downloadLinks")
+    .order("createdAt", { ascending: false })
+    .limit(500);
+
+  if (error || !apps || apps.length === 0) {
     return [{ id: "dummy-id", index: "0" }];
   }
+
   const params = [];
   for (const app of apps) {
-    for (let i = 0; i < (app.downloadLinks?.length || 0); i++) {
-      params.push({ id: app.id, index: i.toString() });
+    if (app.downloadLinks && Array.isArray(app.downloadLinks)) {
+      for (let i = 0; i < app.downloadLinks.length; i++) {
+        params.push({ id: app.id, index: i.toString() });
+      }
     }
   }
+
   if (params.length === 0) {
     return [{ id: "dummy-id", index: "0" }];
   }
