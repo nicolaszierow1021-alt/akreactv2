@@ -1,0 +1,319 @@
+{
+  "apps": [
+    {
+      "id": "everycine",
+      "title": "EveryCine APK – Películas y TV en vivo Gratis",
+      "publisher": "EveryCine",
+      "category": "Entretenimiento",
+      "description": "Disfruta de las mejores películas y series de televisión en vivo y gratis con EveryCine. Una aplicación imprescindible para tu entretenimiento diario.",
+      "version": "2.1.0",
+      "size": "45 MB",
+      "rating": 4.5,
+      "ageRating": "12+",
+      "modType": "Premium",
+      "modInfo": [
+        "Sin anuncios",
+        "Todos los canales desbloqueados",
+        "HD sin restricciones"
+      ],
+      "iconUrl": "https://picsum.photos/seed/everycine-icon/300/300",
+      "bannerUrl": "https://picsum.photos/seed/everycine/600/300",
+      "screenshots": [
+        "https://picsum.photos/seed/everycine1/300/500",
+        "https://picsum.photos/seed/everycine2/300/500",
+        "https://picsum.photos/seed/everycine3/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "Premium",
+          "size": "45M",
+          "url": "#"
+        }
+      ],
+      "featured": true,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-13T00:00:00.000Z"
+    },
+    {
+      "id": "weezer",
+      "title": "Weezer Premium - Music Player",
+      "publisher": "Bitten infotech",
+      "category": "Música y audio",
+      "description": "El mejor reproductor de música premium con ecualizador, soporte para todos los formatos y sin anuncios molestos.",
+      "version": "1.4.2",
+      "size": "22 MB",
+      "rating": 4.5,
+      "ageRating": "3+",
+      "modType": "Premium",
+      "modInfo": [
+        "Sin anuncios",
+        "Ecualizador desbloqueado",
+        "Todos los formatos"
+      ],
+      "iconUrl": "https://picsum.photos/seed/weezer-icon/300/300",
+      "bannerUrl": "https://picsum.photos/seed/weezer/600/300",
+      "screenshots": [
+        "https://picsum.photos/seed/weezer1/300/500",
+        "https://picsum.photos/seed/weezer2/300/500",
+        "https://picsum.photos/seed/weezer3/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "Premium",
+          "size": "22M",
+          "url": "#"
+        }
+      ],
+      "featured": true,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-13T00:00:00.000Z"
+    },
+    {
+      "id": "moviebox",
+      "title": "MovieBox",
+      "publisher": "moviebox",
+      "category": "Entretenimiento",
+      "description": "Mira tus películas y programas de televisión favoritos en cualquier momento y en cualquier lugar.",
+      "version": "3.0.1",
+      "size": "35 MB",
+      "rating": 4.5,
+      "ageRating": "12+",
+      "modType": "Premium",
+      "modInfo": [
+        "Sin anuncios",
+        "Contenido HD",
+        "Descargas ilimitadas"
+      ],
+      "iconUrl": "https://picsum.photos/seed/moviebox-icon/300/300",
+      "bannerUrl": "https://picsum.photos/seed/moviebox/600/300",
+      "screenshots": [
+        "https://picsum.photos/seed/moviebox1/300/500",
+        "https://picsum.photos/seed/moviebox2/300/500",
+        "https://picsum.photos/seed/moviebox3/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "Premium",
+          "size": "35M",
+          "url": "#"
+        }
+      ],
+      "featured": true,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-13T00:00:00.000Z"
+    },
+    {
+      "id": "yt-music",
+      "title": "YouTube Music Premium",
+      "publisher": "Google LLC",
+      "category": "Música y audio",
+      "description": "Youtube Music Premium es una de las aplicaciones más populares que te ofrece escuchar la música que quieras así como la posibilidad de ver videos de la forma más cómoda. Reproduce música en segundo plano mientras realizas múltiples tareas.",
+      "version": "9.22.53",
+      "size": "48M",
+      "rating": 4.8,
+      "ageRating": "12+",
+      "modType": "Premium",
+      "modInfo": [
+        "Escuchar música sin anuncios",
+        "Reproducir música en segundo plano",
+        "Cambiar sin problemas entre audio y video"
+      ],
+      "iconUrl": "https://i0.wp.com/AKDESCARGAS.STORE/wp-content/uploads/2023/01/download-youtube-music.webp?fit=300%2C300&ssl=1",
+      "bannerUrl": "",
+      "screenshots": [
+        "https://picsum.photos/seed/yt1/300/500",
+        "https://picsum.photos/seed/yt2/300/500",
+        "https://picsum.photos/seed/yt3/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "Premium",
+          "size": "120M",
+          "url": "#"
+        },
+        {
+          "name": "APK",
+          "description": "MicroG",
+          "size": "37M",
+          "url": "#"
+        }
+      ],
+      "featured": false,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-14T02:02:14.955Z"
+    },
+    {
+      "id": "photo-lab",
+      "title": "Photo Lab Premium",
+      "publisher": "PHOTO LAB DMCC",
+      "category": "Fotografía",
+      "description": "Photo Lab es el editor de fotos más completo con filtros, efectos y marcos profesionales. Convierte tus fotos en obras de arte.",
+      "version": "3.13.102",
+      "size": "10M",
+      "rating": 5,
+      "ageRating": "3+",
+      "modType": "Premium",
+      "modInfo": [
+        "Todos los filtros desbloqueados",
+        "Sin marca de agua",
+        "Sin anuncios"
+      ],
+      "iconUrl": "https://picsum.photos/seed/photolab/300/300",
+      "bannerUrl": "",
+      "screenshots": [
+        "https://picsum.photos/seed/photolab1/300/500",
+        "https://picsum.photos/seed/photolab2/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "Premium",
+          "size": "10M",
+          "url": "#"
+        }
+      ],
+      "featured": false,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-13T00:00:00.000Z"
+    },
+    {
+      "id": "xrecorder",
+      "title": "Screen Recorder Pro - XRecorder",
+      "publisher": "InShot Inc.",
+      "category": "Herramientas",
+      "description": "Graba tu pantalla en alta calidad con XRecorder. Captura video, audio y toma capturas de pantalla fácilmente.",
+      "version": "2.5.3.1",
+      "size": "30M",
+      "rating": 3.8,
+      "ageRating": "3+",
+      "modType": "Premium",
+      "modInfo": [
+        "Sin anuncios",
+        "Grabación HD",
+        "Sin marca de agua"
+      ],
+      "iconUrl": "https://picsum.photos/seed/xrecorder/300/300",
+      "bannerUrl": "",
+      "screenshots": [
+        "https://picsum.photos/seed/xrecorder1/300/500",
+        "https://picsum.photos/seed/xrecorder2/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "Pro",
+          "size": "30M",
+          "url": "#"
+        }
+      ],
+      "featured": false,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-13T00:00:00.000Z"
+    },
+    {
+      "id": "scary-teacher",
+      "title": "Scary Teacher 3D - Dinero ilimitado",
+      "publisher": "Z & K Games",
+      "category": "Juegos",
+      "description": "Scary Teacher 3D es un juego donde debes asustar a tu maestra malvada. Con dinero ilimitado podrás desbloquear todos los niveles y objetos.",
+      "version": "10.1",
+      "size": "1GB",
+      "rating": 5,
+      "ageRating": "12+",
+      "modType": "Dinero ilimitado",
+      "modInfo": [
+        "Dinero ilimitado",
+        "Todos los niveles desbloqueados",
+        "Sin anuncios"
+      ],
+      "iconUrl": "https://picsum.photos/seed/scaryteacher/300/300",
+      "bannerUrl": "",
+      "screenshots": [
+        "https://picsum.photos/seed/scaryteacher1/300/500",
+        "https://picsum.photos/seed/scaryteacher2/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "MOD",
+          "size": "1GB",
+          "url": "#"
+        }
+      ],
+      "featured": false,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-13T00:00:00.000Z"
+    },
+    {
+      "id": "i-am-monkey",
+      "title": "I Am Monkey - Dinero ilimitado",
+      "publisher": "Estoty",
+      "category": "Juegos",
+      "description": "Juega como un mono travieso en esta divertida aventura. Con dinero ilimitado podrás comprar todas las mejoras.",
+      "version": "1.2.4",
+      "size": "485M",
+      "rating": 4.4,
+      "ageRating": "3+",
+      "modType": "Dinero ilimitado",
+      "modInfo": [
+        "Dinero ilimitado",
+        "Sin anuncios"
+      ],
+      "iconUrl": "https://picsum.photos/seed/iammonkey/300/300",
+      "bannerUrl": "",
+      "screenshots": [
+        "https://picsum.photos/seed/iammonkey1/300/500",
+        "https://picsum.photos/seed/iammonkey2/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "MOD",
+          "size": "485M",
+          "url": "#"
+        }
+      ],
+      "featured": false,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-13T00:00:00.000Z"
+    },
+    {
+      "id": "flip-diving",
+      "title": "Flip Diving - Dinero ilimitado",
+      "publisher": "MotionVolt Games Ltd",
+      "category": "Juegos",
+      "description": "Lánzate desde alturas increíbles y realiza acrobacias impresionantes en Flip Diving.",
+      "version": "4.7.50",
+      "size": "156M",
+      "rating": 4.3,
+      "ageRating": "3+",
+      "modType": "Dinero ilimitado",
+      "modInfo": [
+        "Dinero ilimitado",
+        "Personajes desbloqueados",
+        "Sin anuncios"
+      ],
+      "iconUrl": "https://picsum.photos/seed/flipdiving/300/300",
+      "bannerUrl": "",
+      "screenshots": [
+        "https://picsum.photos/seed/flipdiving1/300/500",
+        "https://picsum.photos/seed/flipdiving2/300/500"
+      ],
+      "downloadLinks": [
+        {
+          "name": "APK",
+          "description": "MOD",
+          "size": "156M",
+          "url": "#"
+        }
+      ],
+      "featured": false,
+      "createdAt": "2026-06-13T00:00:00.000Z",
+      "updatedAt": "2026-06-13T00:00:00.000Z"
+    }
+  ]
+}
